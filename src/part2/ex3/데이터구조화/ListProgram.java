@@ -93,7 +93,7 @@ public class ListProgram {
 				Exam[] exams = list.exams;
 				int size = list.current;
 				
-				if(list.exams.length == list.current) {
+				if(exams.length == size) {
 					// 1. 크기가 5개 정도 더 큰 새로운 배열을 생성하시오.
 					Exam[] temp = new Exam[size + 5];
 					// 2. 값을 이주시키기
