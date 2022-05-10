@@ -99,8 +99,10 @@ public class ExamList {
 			System.out.println("────────────────────────");
 			}
 	}
-
-	public void init() {
+	
+	//public void init() --> public void ExamList()
+	// 개체 ExamList 의 객체를 List라는 이름으로 생성함과 동시에 초기화를 한 번 진행할  것 이므로
+	public void ExamList() {
 			this.exams = new Exam[3];
 			this.current=0;			
 		}
