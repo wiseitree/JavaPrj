@@ -1,4 +1,4 @@
-package part3.ex3.Getters¿ÍSetters.copy;
+package part3.ex3.Getters¿ÍSetters;
 
 import java.util.Scanner;
 
