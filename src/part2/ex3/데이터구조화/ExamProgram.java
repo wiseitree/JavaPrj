@@ -23,7 +23,6 @@ public class ExamProgram {
 		int kor = exam.kor;
 		int eng = exam.eng;
 		int math = exam.math;
-		
 		int total = kor + eng + math;
 		float avg = total/3.0f;
 		
@@ -76,7 +75,6 @@ public class ExamProgram {
 				System.out.println("국어성적은 0~100까지의 범위만 입력이 가능합니다.");
 			}
 		}while(math<0 || 100 < math);
-		
 		exam.kor = kor;
 		exam.eng = eng;
 		exam.math = math;

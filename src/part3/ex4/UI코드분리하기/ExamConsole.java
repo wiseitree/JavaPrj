@@ -7,16 +7,17 @@ public class ExamConsole {
 	private ExamList list = new ExamList();
 	
 	public void printList() {
-		printList(list.size());
-	}
+		  printList(list.size());
+}
 	
-	void printList(int size) {
+	  public void printList(int size) {
 		System.out.println("忙式式式式式式式式式式式式式式式式式式忖");
 		System.out.println("弛     撩瞳 轎溘            弛");
 		System.out.println("戌式式式式式式式式式式式式式式式式式式戎");
 		System.out.println();
 		
 		// int size = list.current;
+		//Exam[] exams = this.exams;
 		
 		for(int i=0; i<size; i++) {
 			Exam exam = list.get(i);//this.exams[i];
@@ -34,10 +35,10 @@ public class ExamConsole {
 			System.out.printf("識薄 : %3d\n", total);
 			System.out.printf("ゎ敕 : %6.2f\n", avg);
 			System.out.println("式式式式式式式式式式式式式式式式式式式式式式式式");
-			}
-	}
-	
-	void inputList() {
+		}
+}
+	  
+	public void inputList() {
 		Scanner scan = new Scanner(System.in); 
 		
 		System.out.println("忙式式式式式式式式式式式式式式式式式式忖");
@@ -83,10 +84,10 @@ public class ExamConsole {
 				
 				
 				Exam exam = new Exam(kor,eng,math);
+
+				/*---------------add-------------------------*/
 				
-				/* ---------add----------------*/
 				list.add(exam);
-				
-				
 		}
+	
 }

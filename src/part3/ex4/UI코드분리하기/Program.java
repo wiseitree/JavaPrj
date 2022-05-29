@@ -3,12 +3,11 @@ package part3.ex4.UI코드분리하기;
 import java.util.Scanner;
 
 public class Program {
-	//커밋테스트
+
 	public static void main(String[] args) {
 		
 		ExamConsole list = new ExamConsole();
-		// list.init();
-		// 초기화를 굳이 진행하지 않더라도 개체 ExamList를 list라는 이름의 객체를 생성함과 동시에 초기화를 진행
+		
 		
 		int menu;
 		boolean keepLoop = true;

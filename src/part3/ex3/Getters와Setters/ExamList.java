@@ -3,12 +3,10 @@ package part3.ex3.Getters와Setters;
 import java.util.Scanner;
 
 public class ExamList {
-	//커밋테스트
 	Exam[] exams;
 	int current;
 	
-	
-	void inputList() {
+	public void inputList() {
 		Scanner scan = new Scanner(System.in); 
 		
 		System.out.println("┌──────────────────┐");
@@ -52,9 +50,10 @@ public class ExamList {
 				exam.setMath(math);//exam.math = math;
 				*/
 				
+				Exam exam1 = new Exam();
 				
 				Exam exam = new Exam(kor,eng,math);
-				
+
 				Exam[] exams = this.exams;
 				int size = this.current;
 				
@@ -73,43 +72,42 @@ public class ExamList {
 				this.current++;
 		}
 	
-	void printList() {
-		this.printList(this.current);
-	}
 	
-	void printList(int size) {
-		System.out.println("┌──────────────────┐");
-		System.out.println("│     성적 출력            │");
-		System.out.println("└──────────────────┘");
-		System.out.println();
+		  public void printList() {
+			  printList(current);
+	}
 		
-		// int size = list.current;
-		Exam[] exams = this.exams;
-		
-		for(int i=0; i<size; i++) {
-			Exam exam = exams[i];
-			int kor = exam.getKor();//exam.kor;
-			int eng = exam.getEng();//exam.eng;
-			int math = exam.getMath();//exam.math;
+		  public void printList(int size) {
+			System.out.println("┌──────────────────┐");
+			System.out.println("│     성적 출력            │");
+			System.out.println("└──────────────────┘");
+			System.out.println();
 			
-			int total = exam.total();//kor + eng + math;
-			float avg = exam.avg();//total/3.0f;
+			// int size = list.current;
+			Exam[] exams = this.exams;
 			
-			System.out.printf("국어: %d\n",kor);
-			System.out.printf("영어: %d\n",eng);
-			System.out.printf("수학: %d\n",math);
-		
-			System.out.printf("총점 : %3d\n", total);
-			System.out.printf("평균 : %6.2f\n", avg);
-			System.out.println("────────────────────────");
+			for(int i=0; i<size; i++) {
+				Exam exam = exams[i];
+				int kor = exam.getKor();//exam.kor;
+				int eng = exam.getEng();//exam.eng;
+				int math = exam.getMath();//exam.math;
+				
+				int total = exam.total();//kor + eng + math;
+				float avg = exam.avg();//total/3.0f;
+				
+				System.out.printf("국어: %d\n",kor);
+				System.out.printf("영어: %d\n",eng);
+				System.out.printf("수학: %d\n",math);
+			
+				System.out.printf("총점 : %3d\n", total);
+				System.out.printf("평균 : %6.2f\n", avg);
+				System.out.println("────────────────────────");
 			}
 	}
-	
-	//public void init() --> public void ExamList()
-	// 개체 ExamList 의 객체를 List라는 이름으로 생성함과 동시에 초기화를 한 번 진행할  것 이므로
-	public void ExamList() {
-			this.exams = new Exam[3];
-			this.current=0;			
-		}
 
+		public ExamList() {
+			exams = new Exam[3];
+			current=0;
+			
+		}
 }

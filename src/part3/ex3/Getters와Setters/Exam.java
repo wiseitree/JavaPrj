@@ -33,7 +33,7 @@ public class Exam {
 		this.math = math;
 	}
 	public int total() {
-
+		
 		return kor+eng+math;
 	}
 	public float avg() {
