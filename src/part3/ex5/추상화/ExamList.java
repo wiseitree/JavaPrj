@@ -1,4 +1,4 @@
-package part3.ex4.UI코드분리하기;
+package part3.ex5.추상화;
 
 public class ExamList {
 	private Exam[] exams;

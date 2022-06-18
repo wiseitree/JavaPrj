@@ -1,17 +1,17 @@
-package part3.ex4.UI코드분리하기;
+package part3.ex5.추상화;
 
 import java.util.Scanner;
 
-public class ExamConsole {
+public abstract class ExamConsole {
 	
 	// Composition Has A 일체형 / 생성될 때 생명주기가 같음
 	private ExamList list = new ExamList();
 	
-	public void printList() {
-		  printList(list.size());
+	public void /*printList*/print() {
+		  print/*printList*/(list.size());
 }
 	
-	  public void printList(int size) {
+	  public void /*printList*/print(int size) {
 		System.out.println("┌──────────────────┐");
 		System.out.println("│     성적 출력            │");
 		System.out.println("└──────────────────┘");
@@ -32,14 +32,18 @@ public class ExamConsole {
 			System.out.printf("국어: %d\n",kor);
 			System.out.printf("영어: %d\n",eng);
 			System.out.printf("수학: %d\n",math);
-		
+			
+			onPrint(exam);
+			
 			System.out.printf("총점 : %3d\n", total);
 			System.out.printf("평균 : %6.2f\n", avg);
 			System.out.println("────────────────────────");
 		}
 }
 	  
-	public void inputList() {
+	
+
+	public void input() /*inputList()*/ {
 		Scanner scan = new Scanner(System.in); 
 		
 		System.out.println("┌──────────────────┐");
@@ -76,6 +80,8 @@ public class ExamConsole {
 					}
 				}while(math<0 || 100 < math);
 				
+				//Event Method
+				
 				/*
 				Exam exam = new Exam();
 				exam.setKor(kor);//exam.kor = kor;
@@ -84,11 +90,22 @@ public class ExamConsole {
 				*/
 				
 				
-				Exam exam = new Exam(kor,eng,math);
-
+				//Exam exam = new Exam(kor,eng,math);
+				Exam exam = makeExam();
+				exam.setKor(kor);
+				exam.setEng(eng);
+				exam.setMath(math);
+				
+				onInput(exam);
+				
 				/*---------------add-------------------------*/
 				
 				list.add(exam);
 		}
+	protected abstract void onPrint(Exam exam);
+	protected abstract void onInput(Exam exam);
+
+	//abstract 메소드를 가질 수 있는 클래스는 오로지 abstract 클래스여야 한다.
+	protected abstract Exam makeExam();
 	
 }
