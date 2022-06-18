@@ -1,4 +1,4 @@
-package part3.ex3.Gettersì™€Setters;
+package part3.ex3.Getters¿ÍSetters;
 
 public class Exam {
 	int kor;
