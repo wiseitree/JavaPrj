@@ -33,6 +33,7 @@ public abstract class ExamConsole {
 			System.out.printf("영어: %d\n",eng);
 			System.out.printf("수학: %d\n",math);
 			
+			//Event Method
 			onPrint(exam);
 			
 			System.out.printf("총점 : %3d\n", total);
@@ -80,7 +81,7 @@ public abstract class ExamConsole {
 					}
 				}while(math<0 || 100 < math);
 				
-				//Event Method
+				
 				
 				/*
 				Exam exam = new Exam();
@@ -96,6 +97,7 @@ public abstract class ExamConsole {
 				exam.setEng(eng);
 				exam.setMath(math);
 				
+				//Event Method
 				onInput(exam);
 				
 				/*---------------add-------------------------*/
